@@ -12,7 +12,7 @@ Este proyecto de **Emprendimiento de Base Tecnológica** nace de la necesidad de
 ## 📄 Documentación del Proyecto
 Para conocer a fondo el desarrollo, la investigación y los resultados, puedes consultar el documento oficial:
 
-👉 **[Descargar Entrega Final (PDF)](./ENTREGA%20FINAL%20-%20ESCENARIO%207%20EBT.pdf)**
+👉 **[Descargar Entrega Final (PDF)](ENTREGA_FINAL_ESCENARIO7_EBT.pdf)**
 
 ---
 
