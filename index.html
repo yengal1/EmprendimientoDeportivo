@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Inicio — Emprendimiento Deportivo</title>
+  <link rel="stylesheet" href="styles_high.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">ED</div>
+        <div>
+          <div class="site-title">Emprendimiento Deportivo</div>
+          <div style="font-size:12px;color:#556">Hecho en Colombia</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="productos-alta.html">Productos</a>
+        <a href="quienes-alta.html">Quiénes somos</a>
+        <a href="contacto-alta.html">Contacto</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="login.html">Iniciar Sesión</a>
+        <button class="btn btn-ghost" onclick="logout()">Salir</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Ropa, calzado y accesorios deportivos</h1>
+        <p>Diseño y manufactura local con enfoque en calidad, comodidad y estilo. Descubre nuestra colección y apoya la producción colombiana.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="productos-alta.html">Ver Catálogo</a>
+          <a class="btn btn-ghost" href="contacto-alta.html">Contáctanos</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="img/hero.jpg" alt="Imagen principal">
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="promo-title" style="margin-top:18px;">
+      <div class="promo" id="promo-title">
+        <div>Promoción: 10% OFF en nuevos lanzamientos</div>
+        <div style="font-weight:600">Válido hasta 30/11/2025</div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="catalogo-title" style="margin-top:18px;">
+      <h2 id="catalogo-title">Productos destacados</h2>
+      <div class="grid">
+        <!-- 3 productos de ejemplo -->
+        <article class="card">
+          <img src="img/prod1.jpg" alt="Zapatillas deportivas — Producto 1">
+          <div class="card-body">
+            <div class="card-title">Zapatillas Runner</div>
+            <div class="card-price">$120.000</div>
+            <div style="margin-top:auto">
+              <a class="btn btn-primary" href="productos-alta.html">Ver</a>
+              <a class="btn btn-ghost" href="https://wa.me/573001234567">WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/prod2.jpg" alt="Camiseta deportiva — Producto 2">
+          <div class="card-body">
+            <div class="card-title">Camiseta Pro</div>
+            <div class="card-price">$45.000</div>
+            <div style="margin-top:auto">
+              <a class="btn btn-primary" href="productos-alta.html">Ver</a>
+              <a class="btn btn-ghost" href="https://wa.me/573001234567">WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/prod3.jpg" alt="Mochila deportiva — Producto 3">
+          <div class="card-body">
+            <div class="card-title">Mochila Sport</div>
+            <div class="card-price">$75.000</div>
+            <div style="margin-top:auto">
+              <a class="btn btn-primary" href="productos-alta.html">Ver</a>
+              <a class="btn btn-ghost" href="https://wa.me/573001234567">WhatsApp</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="info-title" style="margin-top:18px;">
+      <h2 id="info-title">Hecho en Colombia</h2>
+      <p>Apoyamos a talleres locales y procesos responsables. Nuestras piezas son diseñadas y producidas en Colombia con materiales seleccionados.</p>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Emprendimiento Deportivo — <a href="contacto-alta.html">Contacto</a> — <a href="https://wa.me/573001234567">WhatsApp</a></div>
+    </footer>
+  </main>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+function logout(){
+  auth.signOut().then(()=>{
+    window.location.href = "login.html";
+  });
+}
+</script>
+</body>
+</html>

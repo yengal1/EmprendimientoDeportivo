@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Carrito — Emprendimiento Deportivo</title>
+  <link rel="stylesheet" href="styles_high.css">
+</head>
+<script src="auth-protection.js"></script>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">ED</div>
+        <div>
+          <div class="site-title">Emprendimiento Deportivo</div>
+          <div style="font-size:12px;color:#556">Mi Carrito</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="productos-alta.html">Productos</a>
+        <a href="quienes-alta.html">Quiénes somos</a>
+        <a href="contacto-alta.html">Contacto</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="login.html">Iniciar Sesión</a>
+        <a href="carrito.html" style="color:var(--primary); font-weight:700;">Carrito</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="container">
+    <section class="section">
+      <h2>Tu Carrito de Compras</h2>
+      <p>Revisa los productos que has agregado.</p>
+
+      <!-- Tabla de productos -->
+      <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+        <thead>
+          <tr style="background:#eef5ff; text-align:left;">
+            <th style="padding:12px;">Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody id="cart-body">
+          <!-- Productos serán agregados automáticamente por JS -->
+        </tbody>
+      </table>
+
+      <!-- Resumen -->
+      <div style="margin-top:30px; text-align:right;">
+        <h3>Total general: <span id="cart-total">$0</span></h3>
+        <a class="btn btn-primary" href="https://wa.me/573001234567?text=Quiero%20hacer%20mi%20pedido">
+          Finalizar pedido por WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">© <span id="year"></span> Emprendimiento Deportivo</footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Carrito demo almacenado en localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function renderCart() {
+      const tbody = document.getElementById("cart-body");
+      tbody.innerHTML = "";
+
+      let total = 0;
+
+      cart.forEach((item, i) => {
+        const subtotal = item.price * item.qty;
+        total += subtotal;
+
+        tbody.innerHTML += `
+          <tr style="border-bottom:1px solid #e8e8e8;">
+            <td style="padding:10px 0;">${item.name}</td>
+            <td><input type="number" min="1" value="${item.qty}" style="width:60px;" onchange="updateQty(${i}, this.value)"></td>
+            <td>$${item.price.toLocaleString()}</td>
+            <td>$${subtotal.toLocaleString()}</td>
+            <td><button class="btn btn-ghost" onclick="removeItem(${i})">Eliminar</button></td>
+          </tr>
+        `;
+      });
+
+      document.getElementById("cart-total").textContent = "$" + total.toLocaleString();
+    }
+
+    function updateQty(index, qty) {
+      cart[index].qty = parseInt(qty);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    renderCart();
+  </script>
+
+</body>
+</html>

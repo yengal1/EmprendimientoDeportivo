@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contacto — Emprendimiento Deportivo</title>
+  <link rel="stylesheet" href="styles_high.css">
+</head>
+<script src="auth-protection.js"></script>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">ED</div>
+        <div>
+          <div class="site-title">Emprendimiento Deportivo</div>
+          <div style="font-size:12px;color:#556">Contáctanos</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Menú">
+        <a href="index.html">Inicio</a>
+        <a href="productos-alta.html">Productos</a>
+        <a href="quienes-alta.html">Quiénes somos</a>
+        <a href="contacto-alta.html">Contacto</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="login.html">Iniciar Sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>Contacto</h2>
+      <p>Escríbenos y te responderemos lo antes posible.</p>
+
+      <div style="display:grid; grid-template-columns:1fr 360px; gap:20px; align-items:start; margin-top:12px;">
+        <div class="form">
+          <label>Nombre</label>
+          <input class="input" id="name" placeholder="Tu nombre">
+          <label>Correo</label>
+          <input class="input" id="email" type="email" placeholder="correo@ejemplo.com">
+          <label>Mensaje</label>
+          <textarea class="input" id="message" placeholder="Tu consulta"></textarea>
+          <div style="display:flex; gap:10px; margin-top:8px;">
+            <button class="btn btn-primary" onclick="sendForm()">Enviar</button>
+            <a class="btn btn-ghost" href="https://wa.me/573001234567">WhatsApp</a>
+          </div>
+        </div>
+
+        <aside style="background:#fff; padding:14px; border-radius:10px; box-shadow:var(--shadow);">
+          <h3>Contacto rápido</h3>
+          <p><strong>Tel / WhatsApp:</strong> <a href="https://wa.me/573001234567">+57 300 1234567</a></p>
+          <p><strong>Email:</strong> ventas@emprendimientodeportivo.co</p>
+          <p><strong>Redes:</strong> <a href="#">Instagram</a> • <a href="#">Facebook</a></p>
+          <div style="margin-top:12px; height:160px; background:#eef6f2; border-radius:8px; display:flex; align-items:center; justify-content:center;">Mapa (placeholder)</div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">© <span id="y3"></span> Emprendimiento Deportivo</footer>
+  </main>
+
+  <script>
+    document.getElementById('y3').textContent = new Date().getFullYear();
+    function sendForm(){
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      if(!name||!email||!msg){ alert('Por favor completa todos los campos'); return; }
+      // aquí podrías conectar con un endpoint o enviar por correo
+      alert('Mensaje enviado (simulado). Gracias, ' + name + '!');
+      document.getElementById('name').value=''; document.getElementById('email').value=''; document.getElementById('message').value='';
+    }
+  </script>
+</body>
+</html>
+
+

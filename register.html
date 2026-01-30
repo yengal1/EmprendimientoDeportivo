@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <link rel="stylesheet" href="styles_high.css">
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="firebase-config.js"></script>
+</head>
+<body>
+
+  <main class="container section" style="max-width:400px;">
+    <h2>Crear Cuenta</h2>
+
+    <input id="email" class="input" type="email" placeholder="Correo">
+    <input id="pass" class="input" type="password" placeholder="Contraseña">
+
+    <button class="btn btn-primary" onclick="register()">Registrarse</button>
+
+    <p id="msg" style="color:red;"></p>
+  </main>
+
+  <script>
+    function register(){
+      let email = document.getElementById("email").value;
+      let pass = document.getElementById("pass").value;
+
+      auth.createUserWithEmailAndPassword(email, pass)
+      .then(()=>{
+        window.location.href = "login.html";
+      })
+      .catch(err=>{
+        document.getElementById("msg").textContent = err.message;
+      });
+    }
+  </script>
+
+</body>
+</html>
