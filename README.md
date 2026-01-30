@@ -9,6 +9,13 @@ Este proyecto de **Emprendimiento de Base Tecnológica** nace de la necesidad de
 
 ---
 
+## 📄 Documentación del Proyecto
+Para conocer a fondo el desarrollo, la investigación y los resultados, puedes consultar el documento oficial:
+
+👉 **[Descargar Entrega Final (PDF)](./ENTREGA%20FINAL%20-%20ESCENARIO%207%20EBT.pdf)**
+
+---
+
 ## 📊 Investigación de Mercado y UX
 A través de un proceso de investigación profunda, logramos entender las necesidades reales tanto de empresarios como de consumidores.
 
@@ -25,10 +32,8 @@ Utilizamos mapas de empatía para descubrir que los empresarios sienten frustrac
 El desarrollo del producto pasó por múltiples iteraciones de diseño:
 
 1.  **Prototipo de Baja Resolución (Wireframes):** Estructura lógica y flujo de navegación enfocada en la usabilidad.
-2.  **Prototipo de Alta Resolución:** Diseño visual con identidad de marca, paleta de colores deportiva (azules y verdes) y tipografía moderna.
-3.  **Flayer Publicitario:** Creación de piezas gráficas para la estrategia de lanzamiento y atracción de usuarios.
-
-> **Nota:** El diseño incluye Catálogo, Carrito de Compras, Perfil de Usuario y Pasarela de Contacto Directo.
+2.  **Prototipo de Alta Resolución:** Diseño visual con identidad de marca, paleta de colores deportiva y tipografía moderna.
+3.  **Flayer Publicitario:** Creación de piezas gráficas para la estrategia de lanzamiento.
 
 ---
 
@@ -39,20 +44,17 @@ El desarrollo del producto pasó por múltiples iteraciones de diseño:
 
 ---
 
-## 🛠️ Tecnologías Sugeridas para Implementación
-* **Frontend:** React.js / Next.js
-* **Diseño:** Figma (UI/UX)
-* **Marketing:** Estrategia Inbound Marketing y Flyer Design.
-
----
-
-## 👥 Equipo
+## 👥 Equipo (Subgrupo 2)
+* María Rebeca Batty Linero
+* Juan Sebastian Moreno Robayo
 * Yeni Patricia Galindo Valero
-
+* Brayan Javier Alvarez Mahecha
+* Cesar Francisco Puerto Moreno
 
 ---
 
 ## 🎓 Institución
 * **Institución:** Politécnico Grancolombiano
 * **Módulo:** Emprendimiento de Base Tecnológica
+* **Tutor:** Marcela Cascante Montoya
 * **Fecha:** Diciembre 2025
